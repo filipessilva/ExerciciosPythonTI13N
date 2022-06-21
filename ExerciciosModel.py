@@ -133,3 +133,4 @@ def exercicio09():
     return 'O valor da venda é {}'.format(maça * 1)
 
 def exercicio10():
+    return
