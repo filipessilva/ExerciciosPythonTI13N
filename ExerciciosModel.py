@@ -133,4 +133,153 @@ def exercicio09():
     return 'O valor da venda é {}'.format(maça * 1)
 
 def exercicio10():
-    return
+    list = []
+    for i in range(1, 11):
+        valor = float(input('Digite um número: '))
+        list.append(valor)
+    return sorted(list)
+
+def exercicio11():
+    salario = float(input('Digite seu salário fixo em R$:'))
+    vendas = float(input('Digite o total das suas vendas em R$: '))
+    if vendas >= 1500.0:
+            c5 = (5*(vendas-1500))/100
+            c3 = (3*vendas)/100
+            total = salario+c3+c5
+
+            return 'Você atingiu sua meta ! Seu salário total será de R${}'.format(total)
+    else:
+            c3 = (3/vendas)*100
+            total = salario + c3
+
+            return 'Seu salário total será de R${}'.format(total)
+
+def exercicio12():
+    conta = int(input('Digite o número da sua conta:'))
+    saldo = float(input('Digite seu saldo em R$:'))
+    debito = float(input('Digite o débito que você possui em R$:'))
+    credito = float(input('Digite seu crédito em R$:'))
+
+    saldoatualizado = saldo - debito + credito
+    if saldoatualizado >= 0:
+        return 'Saldo Positivo, seu saldo é de R${}'.format(saldoatualizado)
+    else:
+        return 'Saldo Negativo, seu saldo é de -R${}' .format(saldoatualizado)
+
+def exercicio13():
+    n = int(input('Digite um valor entre 1 e 10: '))
+    if n > 10:
+        return 'Opção inválida, digite um valor entre 1 e 10'
+    elif n<0:
+        return 'Opção inválida, digite um valor entre 1 e 10'
+    else:
+        for i in range(1, 11):
+            result = n*i
+            print('{} * {} = {}'.format(n, i, result))
+
+def exercicio14():
+    n = int(input('Digite um número: '))
+    for i in range(1, n+1):
+        print(i)
+
+def exercicio15():
+    list = 0
+    for i in range(1,11):
+        n = int(input('Digite um número: '))
+        if n<0:
+            list += +1
+
+    return '\nSua lista possui {} números negativos' .format(list)
+
+def exercicio16():
+    list = 0
+    for i in range(1, 11):
+        n = float(input('Digite um número: '))
+        if n<40:
+            list += n
+
+    return '\nO resultado da sua soma é {}' .format(list)
+
+def exercicio17():
+    aux = 0
+    quant = 0
+    for i in range(1, 101):
+
+        aux += i
+        quant += +1
+        result = aux/quantidade
+
+    return '\n{} / {} = {}' .format(aux, quant, result)
+
+def exercicio18():
+   n = int(input('Quantos números deseja digitar? '))
+   if n<=0:
+       print('Obrigado!')
+   else:
+    aux3 = 0
+    quant = 1
+
+    maior = float(input('Digite um número: '))
+    for i in range(2, n + 1):
+        num = float(input('Digite um número: '))
+
+        aux2 = maior
+        aux3 += num
+        quant += +1
+        med = (aux2+aux3)/quant
+
+        if num>maior:
+            maior = num
+
+    print ('O maior número foi {}, e a media dos numeros {}').format(maior,med)
+
+def exercicio19():
+    total = 0
+    maior = 0
+    list = []
+    for i in range(20):
+        nota = float(input('Informe a {}ª nota:'.format(i+1)))
+        list.append(nota)
+        if nota>10:
+            print('Digite uma nota válida')
+        elif nota<0:
+            print('Digite uma nota válida')
+        else:
+            total += nota
+            medg = total / 20
+
+    for i in range(20):
+       if list[i] > medg:
+          maior += 1
+
+    print('A média da turma foi {} e {} aluno(s) tiveram nota maior que a média.'.format(medg,maior))
+
+def exercicio20():
+    med = 0
+    medf = 0
+    meds = 0
+    abaixo = 0
+
+    habitantes = int(input('Digite a quantidade de habitantes: '))
+    for i in range(1, habitantes+1):
+        salario = float(input('Digite seu salário em R$: '))
+        if salario<=150.0:
+            abaixo = +1
+        if meds<salario:
+            meds = salario
+        if salario<0:
+            print('Salário inválido')
+        filhos = int(input('Digite a quantidade de filhos que você possui: '))
+        if filhos<0:
+            print('Quantidade inválida')
+
+        med += salario
+        medf += filhos
+    results = med/habitantes
+    resultf = medf/habitantes
+    resultm = (abaixo/habitantes)*100
+
+    print('Média do salário da população: R${}'.format(results))
+    print('Media de numero de filhos por habitante: {}'.format(resultf))
+    print('Maior salario entre os habitantes: R$ {}'.format(meds))
+    print('A porcentagem de pessoas com salario abaixo de R$150.0 é de: {}%'.format(resultm))

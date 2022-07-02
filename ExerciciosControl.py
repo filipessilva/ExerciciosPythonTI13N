@@ -53,26 +53,26 @@ def Executar():
         elif this.opcao == 9:
             print(ExerciciosModel.exercicio09())
         elif this.opcao == 10:
-            print()
+            print(ExerciciosModel.exercicio10())
         elif this.opcao == 11:
-            print()
+            print(ExerciciosModel.exercicio11())
         elif this.opcao == 12:
-            print()
+            print(ExerciciosModel.exercicio12())
         elif this.opcao == 13:
-            print()
+            print(ExerciciosModel.exercicio13())
         elif this.opcao == 14:
-            print ()
+            print(ExerciciosModel.exercicio14())
         elif this.opcao == 15:
-            print()
+            print(ExerciciosModel.exercicio15())
         elif this.opcao == 16:
-            print()
+            print(ExerciciosModel.exercicio16())
         elif this.opcao == 17:
-            print()
+            print(ExerciciosModel.exercicio17())
         elif this.opcao == 18:
-            print()
+            print(ExerciciosModel.exercicio18())
         elif this.opcao == 19:
-            print()
+            print(ExerciciosModel.exercicio19())
         elif this.opcao == 20:
-            print()
+            print(ExerciciosModel.exercicio20())
         else:
             print ('Opção informada não é valida!')
